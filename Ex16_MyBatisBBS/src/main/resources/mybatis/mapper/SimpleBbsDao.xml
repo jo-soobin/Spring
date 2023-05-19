@@ -9,15 +9,15 @@
     </select>
     
     <select id="viewDao" resultType="com.study.springboot.dto.SimpleBbsDto">
-        select * from simple_bbs where id = #{0}
+        select * from simple_bbs where id = #{param1}
     </select>
     
-    <select id="writeDao">
+    <insert id="writeDao">
         insert into simple_bbs (writer, title, content)
             values (#{param1}, #{param2}, #{param3})
-    </select>
+    </insert>
     
-    <select id="deleteDao">
-        delete from simple_bbs where id = #{_id}
-    </select>
+    <delete id="deleteDao">
+        delete from simple_bbs where id = #{param1}
+    </delete>
 </mapper>

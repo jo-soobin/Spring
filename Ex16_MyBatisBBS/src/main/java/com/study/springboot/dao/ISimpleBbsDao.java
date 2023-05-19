@@ -8,9 +8,8 @@ import org.apache.ibatis.annotations.Param;
 import com.study.springboot.dto.SimpleBbsDto;
 @Mapper
 public interface ISimpleBbsDao {
-    List<SimpleBbsDto> listDao();
-    SimpleBbsDto viewDao(String id);
-    Integer writeDao(String writer, String title, String content);
-    Integer deleteDao(@Param("_id") String id);
+	public List<SimpleBbsDto> listDao();
+    public SimpleBbsDto viewDao(String id);
+    public int writeDao(String writer, String title, String content);
+    public int deleteDao(String id);
 }
-
